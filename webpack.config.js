@@ -14,6 +14,10 @@ module.exports = {
     }]
   },
   resolve: {
+    root: __dirname,
+    alias: {
+      //add each component
+    },
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
