@@ -1,7 +1,7 @@
 
 module.exports = {
   entry:  [
-  	'./src/index.js'
+  	'./src/app.js'
   ],
   output: {
     path: __dirname + "/public",
@@ -16,7 +16,7 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      //add each component
+      Main: 'src/components/main.js'
     },
     extensions: ['', '.js', '.jsx']
   },
