@@ -25,5 +25,6 @@ module.exports = {
     colors: true,
     contentBase: './public',
     inline: true
-  }
-}
+  },
+  devtool: 'cheap-module-eval-source-map'
+};
