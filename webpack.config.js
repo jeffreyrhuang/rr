@@ -4,19 +4,26 @@ module.exports = {
   	'./src/app.js'
   ],
   output: {
-    path: __dirname + "/public",
-    filename: "bundle.js"
+    path: __dirname + '/public',
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel'
-    }]
+    loaders: [
+      {
+        exclude: /node_modules/,
+        loader: 'babel'
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      }
+    ]
   },
   resolve: {
     root: __dirname,
     alias: {
-      Main: 'src/components/main.js'
+      Main: 'src/components/main.js',
+      applicationStyles: 'public/styles/main.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
